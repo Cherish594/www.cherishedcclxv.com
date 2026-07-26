@@ -1,0 +1,46 @@
+# Android Repair CLI Configuration
+
+# Supported Devices
+devices:
+  tecno:
+    - name: "Tecno Spark Go"
+      model: "SPARK_GO"
+      recovery_keys: ["VOLUME_UP", "POWER"]
+      fastboot_keys: ["VOLUME_DOWN", "POWER"]
+  
+  samsung:
+    - name: "Samsung Galaxy A series"
+      recovery_keys: ["VOLUME_UP", "POWER"]
+      fastboot_keys: ["VOLUME_DOWN", "POWER"]
+  
+  xiaomi:
+    - name: "Xiaomi Redmi series"
+      recovery_keys: ["VOLUME_UP", "POWER"]
+      fastboot_keys: ["VOLUME_DOWN", "POWER"]
+
+# ADB Configuration
+adb:
+  default_port: 5037
+  timeout: 30
+  retry_attempts: 3
+
+# Firmware Sources
+firmware:
+  repositories:
+    - name: "Tecno Official"
+      url: "https://www.tecno-mobilestore.com/support"
+    - name: "XDA Developers"
+      url: "https://forum.xda-developers.com"
+
+# Recovery Options
+recovery:
+  factory_reset: true
+  wipe_cache: true
+  wipe_data: true
+  backup_before_reset: true
+
+# Logging
+logging:
+  level: "INFO"
+  file: "android_repair.log"
+  max_size_mb: 10
